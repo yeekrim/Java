@@ -1,0 +1,55 @@
+자바 기본 구조 {
+	public : 접근제어자, 누구나 이 메서드에 접근할 수 있다는 의미
+	main() << 이러한 것들을 메서드라고 함. 괄호 안에 자료형과 변수명을 입력
+	
+	소스코드구조 {
+	public class 클래스명 { //클래스명은 소스파일의 이름과 동일해야함!
+	
+	    /* 메서드 블록 */
+	    [public|private|protected|none]//접근제어 [static|none] (리턴자료형|void) 메서드명1(입력자료형 매개변수, ...) {
+	        명령문(statement);
+	        ...
+	    }
+	
+	    /* 메서드 블록 */
+	    //여러개의 메서드 블록으로 이루어
+	
+	    ...
+	}
+}
+
+자료형 {
+	자료형 : int, long, double, boolean, char, String, StringBuffer, List, Map, Set
+	class 블록으로 새로운 자료형을 만들기 가능
+	
+	long 사용 시, int의 최대값(2147483647)보다 큰 경우 숫자 뒤에 대소문자 L,l을 붙여야함.(컴파일 에러 발생)
+	자바에서 실수 디폴트는 double임. float 사용 시, double의 최대값보다 큰 경우 대소문자 F,f을 붙여야함(컴파일 에러 발생)
+	
+	8, 16진수는 int자료형에 포함.
+	0으로 시작하면 8진수, 0x로 시작하면 16진수.
+	
+	문자 하나의 표현 방식이 다양 ex) 문자, 아스키코드, 유니코드('\u0061'=a)
+	
+	문자열 지정 방법 : String 변수이름 = [new String("")|none ""]; //new = 객체 만들 때 사용, 새로 생성된 자료형?
+	원시자료형(primitive) : int, long, double, float, boolean, char = new 키워드로 생성 불가,리터럴 표기로만 세팅 가능
+	String은 원시자료형이 아니지만 리터럴 표현도 가능하게 함.
+	
+	자료형마다 상응하는 Wrapper 클래스를 사용해야함.  
+	문자열 포매팅 시, %를 포함하기 위해선 %%로 사용해야함.
+	%숫자.숫자 = 소수점 전 숫자 : 공백 수, 소수점 후 숫자 : 소수점 자릿수, 소수점 전 - : 왼쪽 정렬
+}
+
+method {
+	String 내장 메서드{
+		String.format() = 문자열 리턴
+		System.out.println() = 문자열 출력 //System.out.println(String.format("문자열")); == System.out.println("문자열");
+		a.equals(b) = 출력 형태 : boolean
+		a.indexOf("문자열") = 문자열 시작 index 출력함
+		a.contains("문자열") = 특정 문자열 포함 여부, 출력형태 : boolean
+		a.charAt(int) = a의 인덱스 6번째 문자 출력
+		a.replaceAll("문자열1", "문자열2") = 문자열1을 문자열2로 바꿈
+		a.substring(int1,int2) = a의 인덱스 int1부터 (int2-1)까지 출력
+		a.toUpperCase() = a을 모두 대문자로, 소문자는 a.toLowerCase()
+		a.split("문자") = 문자를 기준으로 문자열을 나눈 문자열 배열을 생성 
+		}
+}
