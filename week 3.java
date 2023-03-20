@@ -15,7 +15,7 @@ public class week3 {
 	}
 }
 		
-public class 실행판 {
+public class week3 {
 	public static void main(String[] args) {	
 	//반지름 입력받는 방식으로 원의 면적 구하기 
 	double radius;
